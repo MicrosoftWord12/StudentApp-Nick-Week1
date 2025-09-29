@@ -10,7 +10,7 @@
 
 // Init Block Version
 //
-class Student(id: String, name: String, course: String, mark: Int) {
+class Student(id: String, name: String, course: String) {
     var id: String = id
     var name: String = name
     var course: String = course
@@ -34,6 +34,10 @@ class Student(id: String, name: String, course: String, mark: Int) {
             this.mark in 40 .. 49 -> "Third"
             else -> "Fail"
         }
+    }
+
+    fun didPass(): Boolean {
+        return this.mark >= 40
     }
 
     override fun toString(): String {
