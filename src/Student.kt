@@ -10,7 +10,7 @@
 
 // Init Block Version
 //
-class Student(id: String, name: String, course: String) {
+abstract class Student(id: String, name: String, course: String) {
     var id: String = id
     var name: String = name
     var course: String = course
@@ -26,15 +26,7 @@ class Student(id: String, name: String, course: String) {
         this.mark = mark
     }
 
-    fun getGrade(): String {
-        return when {
-            this.mark > 70 -> "First"
-            this.mark in 60 .. 69 -> "2/1"
-            this.mark in 50 .. 59 -> "2/2"
-            this.mark in 40 .. 49 -> "Third"
-            else -> "Fail"
-        }
-    }
+    abstract fun getGrade(): String
 
     fun didPass(): Boolean {
         return this.mark >= 40
