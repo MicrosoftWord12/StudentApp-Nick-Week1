@@ -1,3 +1,5 @@
+import base.Student
+
 class Masters(id: String, name: String, course: String): Student(id, name, course) {
 
     override fun getGrade(): String {
